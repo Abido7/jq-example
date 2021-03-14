@@ -1,0 +1,199 @@
+* {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif !important;
+}
+body {
+  overflow: hidden;
+}
+/* =================================================================== */
+/* loading page */
+/* X-ROTATING BOXES */
+.loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #1c272f;
+  z-index: 99999999999999999999999999;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+.configure-border-1 {
+  width: 115px;
+  height: 115px;
+  padding: 3px;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(214, 46, 51, 0.8);
+  animation: configure-clockwise 3s ease-in-out 0s infinite alternate;
+}
+.configure-border-2 {
+  width: 115px;
+  height: 115px;
+  padding: 3px;
+  left: -115px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgb(63,249,220);
+  transform: rotate(45deg);
+  animation: configure-xclockwise 3s ease-in-out 0s infinite alternate;
+}
+.configure-core {
+  width: 100%;
+  height: 100%;
+  background-color: #1d2630;
+}
+@keyframes configure-clockwise {
+  0% {
+    transform: rotate(0);
+  }
+  25% {
+    transform: rotate(90deg);
+  }
+  50% {
+    transform: rotate(180deg);
+  }
+  75% {
+    transform: rotate(270deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes configure-xclockwise {
+  0% {
+    transform: rotate(45deg);
+  }
+  25% {
+    transform: rotate(-45deg);
+  }
+  50% {
+    transform: rotate(-135deg);
+  }
+  75% {
+    transform: rotate(-225deg);
+  }
+  100% {
+    transform: rotate(-315deg);
+  }
+}
+/* ================================================================== */
+.home {
+  height: 100vh;
+  background-image: url("../imgs/header.jpg");
+  background-size: 100% 100%;
+}
+.overlay {
+  height: 100%;
+  width: 100%;
+  background-color: rgba(150, 0, 0, 0.5);
+}
+.leftBar{
+position: absolute;
+left: -250px;
+top: 0;
+z-index: 99999999999999;
+}
+.open {
+  position: absolute;
+  left: 238px;
+  top: 280px;
+  cursor: pointer;
+}
+.open .icon span {
+  height: 3px;
+  display: block;
+  width: 25px;
+  margin-top: 7px;
+  background-color: #fff;
+}
+.list {
+  position: fixed;
+  height: 100vh;
+  padding: 70px 120px 0 30px;
+  z-index: 999999999999;
+  color: #fff;
+  background-color: #1c272f;
+  font-size: 25px;
+}
+.list span {
+  position: absolute;
+  right: 20px;
+  top: 5px;
+  font-size: 35px;
+  cursor: pointer;
+  font-family: cursive !important;
+}
+.list a {
+  text-decoration: none;
+  color: #fff;
+  text-transform: capitalize;
+  margin: 17px 0;
+  cursor: pointer;
+}
+/* ====================================== */
+.singers .singer h2{
+  background-color: rgba(214, 46, 51 , 0.6);
+  font-size: 25px;
+  cursor: pointer;
+}
+.singers .singer p {
+  background-color: #ccc;
+  display: none;
+  margin: 0;
+  padding: 20px;
+  font-size: 14px;
+}
+/* ====================================== */
+.duration {
+  background-image: url(../imgs/invitation.jpg);
+  background-size: 100% 100%;
+  margin-top: 100px;
+}
+.content {
+  border: 1px solid #fff;
+}
+/* ===================================== */
+.address svg {
+  font-size: 15px;
+  color: #777;
+}
+.social a {
+  margin: 10px;
+  width: 40px;
+  height: 40px;
+  padding: 10px;
+  border: 1px solid #777;
+  transition: all 200ms ;
+}
+.social a svg {
+  color: #777;
+}
+.social a:hover {
+  background-color: #D62E33;
+  border: none;
+  border-radius: 5px;
+}
+.social a:hover svg {
+  color: #fff;
+
+}
+#up{
+  display: none;
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  cursor: pointer;
+  background-color: rgba(214, 46, 51, 0.8);
+}
+
+#messageAlert::after{
+  content: "Characyer Reamining";
+  color: #1c272f;
+  padding-left: 10px;
+}
+/* ============================================================  */
